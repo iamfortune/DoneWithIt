@@ -1,20 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, Button } from 'react-native';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello Fortune</Text>
-      <Text>This is an App by Fortune Ikechi.</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text numberOfLines={1}> Hello Fortune, To the utmost bounds of the earth. </Text>
+      <Button 
+      color="blue"
+      title="Welcome to DoneWit App" 
+      />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#ffff',
     justifyContent: 'center',
+    alignItems: "center",
   },
 });
