@@ -1,24 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, SafeAreaView, Button } from 'react-native';
-
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
+  console.log("App executed");
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1}> Hello Fortune, To the utmost bounds of the earth. </Text>
-      <Button 
-      color="blue"
-      title="Welcome to DoneWit App" 
-      />
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text>Hello React Native</Text>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffff',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
     alignItems: "center",
+    justifyContent: "center",
   },
 });
