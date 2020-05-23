@@ -1,13 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, Button, SafeAreaView, Dimensions, StatusBar,Platform,View } from "react-native";
 
 export default function App() {
-  console.log("App executed");
+  console.log(Dimensions.get('screen'));
 
   return (
-    <View style={styles.container}>
-      <Text>Hello React Native</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={{
+        backgroundColor: 'dodgerblue',
+        width: "100%",
+        height: "30%",
+      }}>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -15,7 +20,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
