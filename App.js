@@ -13,7 +13,16 @@ export default function App() {
         alignItems: "center",
       }}
     >
-    <Text>I am Fortune Ikechi, but you know that already</Text>
+    <Text style={{
+      fontSize: 30,
+      fontFamily: "Roboto",
+      fontStyle: "italic",
+      fontWeight: "600",
+      color: "tomato",
+      textTransform: "capitalize",
+      textAlign: "center",
+      
+    }}>I'm Fortune Ikechi, but you knew that already, i want to make a shit tone of money </Text>
     </View>
   );
 }
