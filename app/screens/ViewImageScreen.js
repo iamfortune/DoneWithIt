@@ -1,14 +1,45 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 
 const ViewImageScreen = () => {
     return (
-        <View>
-            <Text></Text>
-        </View>
-    )
+      <View style={styles.container}>
+        <View style={styles.closeIcon}></View>
+        <View style={styles.deleteIcon}></View>
+        <Image
+          resizeMode="contain"
+          style={styles.image}
+          source={require("../assets/chair.jpg")}
+        />
+      </View>
+    );
 }
 
 export default ViewImageScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  closeIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: "#fc5c65",
+    position: "absolute",
+    top: 25, // this was 40 in the tutorial with an iphone similator, i'm using my phone to test
+    left: 30,
+  },
+  container: {
+    backgroundColor: "#000",
+    flex: 1,
+  },
+  deleteIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: "#4ecbc4",
+    position: "absolute",
+    top: 25, // this was 40 in the tutorial with an iphone simulator
+    right: 30,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+  },
+});
