@@ -5,5 +5,15 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
-  return <ViewImageScreen />
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+    <Text>I am Fortune Ikechi, but you know that already</Text>
+    </View>
+  );
 }
