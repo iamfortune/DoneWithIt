@@ -1,5 +1,7 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native';
+
+import colors from '../config/colors';
 
 const ViewImageScreen = () => {
     return (
@@ -21,19 +23,19 @@ const styles = StyleSheet.create({
   closeIcon: {
     width: 50,
     height: 50,
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
     position: "absolute",
     top: 25, // this was 40 in the tutorial with an iphone similator, i'm using my phone to test
     left: 30,
   },
   container: {
-    backgroundColor: "#000",
+    backgroundColor: colors.black,
     flex: 1,
   },
   deleteIcon: {
     width: 50,
     height: 50,
-    backgroundColor: "#4ecbc4",
+    backgroundColor: colors.secondary,
     position: "absolute",
     top: 25, // this was 40 in the tutorial with an iphone simulator
     right: 30,
