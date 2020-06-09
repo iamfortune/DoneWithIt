@@ -1,12 +1,20 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native'
+import { Text, StyleSheet, Platform } from 'react-native';
+import { } from '@expo/vector-icons'
 
-export default function AppText({children}) {
-    return
-       <Text>{children}</Text>
+// headin component
+function AppText({children}) {
+    return (
+       <Text style={styles.text}>{children}</Text>
+    );
 }
 
 const styles = StyleSheet.create({
-    
-})
+    text: {
+        fontSize: 18,
+        fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir"
+    }
+});
+
+export default AppText;
 
