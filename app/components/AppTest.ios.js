@@ -1,5 +1,5 @@
  import React from "react";
- import { Text, StyleSheet, Platform } from "react-native";
+ import { Text, StyleSheet } from "react-native";
  import {} from "@expo/vector-icons";
 
  // headin component
