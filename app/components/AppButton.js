@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 
 import colors from '../config/colors';
 
-function Button({title}) {
+function AppButton({title}) {
     return (
         <View style={styles.button}>
         <Text style={styles.text}>{title}</Text>
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Button;
+export default AppButton;
