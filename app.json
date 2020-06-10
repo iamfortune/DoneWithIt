@@ -9,9 +9,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/logo-red.png",
+    "icon": "",
     "splash": {
-      "image": "./app/assets/background.jpg",
+      "image": "",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
