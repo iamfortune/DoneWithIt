@@ -1,10 +1,12 @@
 import React from 'react'
 import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native'
 import AppButton from '../components/AppButton';
+import App from '../../App';
 
 const WelcomeScreen = () => {
     return (
       <ImageBackground
+      blurRadius={2} // this made the background imae blurry
         style={styles.background}
         source={require("../assets/background.jpg")}
       >
@@ -13,29 +15,23 @@ const WelcomeScreen = () => {
             style={styles.logo}
             source={require("../assets/logo-red.png")}
           />
-          <Text>Sell Items You Don't Need</Text>
+          <Text style={styles.tagline}>Sell Items You Don't Need</Text>
         </View>
         <View style={styles.buttonsContainer}>
           <AppButton title="Login" />
-          <View style={styles.registerButton}></View>
-        </View>
+          <AppButton title="Register" color="secondary" />
+        </View> 
       </ImageBackground>
     );
 }
 
-export default WelcomeScreen
+export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
     justifyContent: "flex-end",
     alignItems: 'center',
-    // bottom: 10,
-  },
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "#4ecdc4",
   },
   buttonsContainer: {
     padding: 20,
@@ -50,5 +46,12 @@ const styles = StyleSheet.create({
     top: 70,
     alignItems: "center",
   },
+  tagline: {
+    fontSize: 25,
+    fontWeight: "600",
+    paddingVertical: 20,
+  },
 });
  
+// margin adds space around an object
+// padding is the space inside it
