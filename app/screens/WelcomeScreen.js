@@ -15,7 +15,7 @@ const WelcomeScreen = () => {
           />
           <Text>Sell Items You Don't Need</Text>
         </View>
-        <View>
+        <View style={styles.buttonsContainer}>
           <AppButton title="Login" />
           <View style={styles.registerButton}></View>
         </View>
@@ -36,6 +36,10 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 70,
     backgroundColor: "#4ecdc4",
+  },
+  buttonsContainer: {
+    padding: 20,
+    width: "100%",
   },
  logo: {
     width: 100,
