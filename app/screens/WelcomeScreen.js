@@ -55,3 +55,4 @@ const styles = StyleSheet.create({
  
 // margin adds space around an object
 // padding is the space inside it
+// fortis fortuna adiuvat { google search }
