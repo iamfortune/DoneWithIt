@@ -6,7 +6,7 @@ import App from '../../App';
 const WelcomeScreen = () => {
     return (
       <ImageBackground
-      blurRadius={3} // this made the background imae blurry
+      blurRadius={3} // this made the background image blurry
         style={styles.background}
         source={require("../assets/background.jpg")}
       >
