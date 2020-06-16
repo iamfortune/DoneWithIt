@@ -4,10 +4,10 @@ import colors from '../config/colors';
 import AppText from './AppText';
 
 
-function Card(title, subTitle, Image) {
+function Card({ title, subTitle, image }) {
     return (
        <View style={styles.card}>
-       <Image source={Image} />
+       <Image style={styles.image} source={image} />
        <AppText>{title}</AppText>
        <AppText>{subTitle}</AppText>
        </View>
@@ -19,6 +19,10 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         backgroundColor: colors.white,
         marginBottom: 20
+    },
+    image: {
+        width: "100%",
+
     }
 })
 
