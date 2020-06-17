@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: colors.primary,
     position: "absolute",
-    top: 25, // this was 40 in the tutorial with an iphone similator, i'm using my phone to test
+    top: 25, // this was 40 with an iphone similator, using my android phone to test
     left: 30,
   },
   container: {
@@ -37,11 +37,12 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: colors.secondary,
     position: "absolute",
-    top: 25, // this was 40 in the tutorial with an iphone simulator
+    top: 25, // this was 40 with an iphone simulator
     right: 30,
   },
   image: {
     width: "100%",
     height: "100%",
+    marginTop: 30, // with an iphone simulator 
   },
 });
