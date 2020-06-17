@@ -7,7 +7,7 @@ export default function App() {
   return <View style={{
     backgroundColor: '#f8f4f4',
     padding: 20,
-    paddingTop: 100,
+    paddingTop: 65,
   }}>
   <Card 
   title="Red jacket for sale"
