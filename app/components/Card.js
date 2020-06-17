@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     card: {
         borderRadius: 15,
         backgroundColor: colors.white,
-        marginBottom: 20
+        marginBottom: 20,
+        overflow: 'hidden',
     },
     detailsContainer:{
         padding: 5,
@@ -28,6 +29,10 @@ const styles = StyleSheet.create({
     image: {
         width: '100%',
         height: 200,
+    },
+    subTitle: {
+        color: colors.secondary,
+        fontWeight: "bold",
     },
     title: {
         marginBottom: 7,
