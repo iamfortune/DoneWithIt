@@ -1,6 +1,8 @@
 import React from 'react'
-import { FlatList, SafeAreaView, StyleSheet, Platform, StatusBar } from 'react-native';
+import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
 import ListItem from '../components/ListItem';
+
 
 const messages = [
   {
@@ -36,11 +38,13 @@ function MessagesScreen(props) {
 
 const styles = StyleSheet.create({
   screen: {
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
-  }
+    paddingTop: Constants.statusBarHeight
+  },
 })
 
 export default MessagesScreen;
 
 
+// paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    // Doing the above removes the issue of an component being above the statusBar 
 // Always add a SafeAreaView and a platform module to add space on the top of the application
