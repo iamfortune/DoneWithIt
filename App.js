@@ -11,6 +11,7 @@ import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingsScreen from "./app/screens/ListingsScreen";
 import { TextInput } from "react-native";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
   const [firstName, setFirstName] = useState('');
@@ -18,14 +19,7 @@ export default function App() {
 
   return ( 
     <Screen>
-      <TextInput 
-      onChangeText={text => setFirstName(text)}
-        placeholder="First name" 
-        style={{
-          borderBottomColor: "#ccc", 
-          borderBottomWidth: 1,
-          }}
-        />
+      <AppTextInput placeholder="Username" icon="email"  />
     </Screen>
   )
 }
