@@ -19,7 +19,17 @@ const [isNew, setIsNew] = useState(false);
 
   return ( 
     <Screen>
-      <Switch value={} />
+      <Switch value={isNew} onValueChange={(newValue)  => setIsNew(newValue)} />
     </Screen>
   )
 }
+
+
+
+// The Great Gatsby == the part in Daisy's dock in the book
+// it has a quote, and it says...
+// He had come a long way to this blue lawn, 
+// and his dreams must have seemed so close,
+// that he could hardly fail to grasp it...
+
+// Inside Bill's head 
