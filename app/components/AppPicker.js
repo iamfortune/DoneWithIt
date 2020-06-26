@@ -6,7 +6,7 @@ import AppText from './AppText';
 import colors from "../config/colors";
 import defaultStyles from "../config/styles";
 
-function AppPicker({ icon, ...otherProps, placeholder }) {
+function AppPicker({ icon, placeholder }) {
   return (
     <View style={styles.container}>
       {icon && (

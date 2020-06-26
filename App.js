@@ -13,13 +13,14 @@ import ListingsScreen from "./app/screens/ListingsScreen";
 import { TextInput } from "react-native";
 import AppTextInput from "./app/components/AppTextInput";
 import { Switch } from "react-native";
+import AppPicker from "./app/components/AppPicker";
 
 export default function App() {
 const [isNew, setIsNew] = useState(false);
 
   return ( 
     <Screen>
-      <Switch value={isNew} onValueChange={(newValue)  => setIsNew(newValue)} />
+      <AppPicker placeholder="Category" />
     </Screen>
   )
 }
