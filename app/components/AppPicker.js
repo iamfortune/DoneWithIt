@@ -1,15 +1,19 @@
-import React from "react";
-import { View, TextInput, StyleSheet } from "react-native";
+import React, {useState} from "react";
+import {View, TextInput, StyleSheet, TouchableWithoutFeedback, Modal, Button} from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
+import Screen from './Screen';
 import defaultStyles from "../config/styles";
 import AppText from "./AppText";
-import { TouchableWithoutFeedback } from "react-native";
 
-function AppPicker({ icon, placeholder }) {
+
+function AppPicker({ icon, placeholder, ...otherProps }) {
+  const [modalVisible,setModalVisible] = useState(false);
+
   return (
-    <TouchableWithoutFeedback>
+    <>
+    <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
     <View style={styles.container}>
       {icon && (
         <MaterialCommunityIcons
@@ -27,6 +31,12 @@ function AppPicker({ icon, placeholder }) {
       />
     </View>
     </TouchableWithoutFeedback>
+    <Modal visible={modalVisible} animationType="slide">
+      <Screen>
+      <Button title="Close" onPress={() => setModalVisible(false)} />
+      </Screen>
+    </Modal>
+    </>
   );
 }
 
