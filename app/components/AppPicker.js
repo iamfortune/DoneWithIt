@@ -6,6 +6,7 @@ import colors from "../config/colors";
 import Screen from './Screen';
 import defaultStyles from "../config/styles";
 import AppText from "./AppText";
+import PickerItem from "./PickerItem";
 
 
 function AppPicker({ icon, items, placeholder }) {
@@ -37,7 +38,10 @@ function AppPicker({ icon, items, placeholder }) {
       <FlatList 
       data={items}
       keyExtractor={item => item.value.toString()}
-      renderItem={({ item }) => } />
+      renderItem={({ item }) => 
+      <PickerItem 
+      label={item.label}
+      onPress={() => console.log(item)} />} />
       </Screen>
     </Modal>
     </>
