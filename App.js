@@ -16,16 +16,24 @@ import { Switch } from "react-native";
 import AppPicker from "./app/components/AppPicker";
 
 export default function App() {
-const categories = [
-  { label: "furniture", value: 1 },
-  { label: "Clothing", value: 2 },
-  { label: "Electronics", value: 3 },
-];
+  const categories = [
+    { label: "furniture", value: 1 },
+    { label: "Clothing", value: 2 },
+    { label: "Electronics", value: 3 },
+  ];
+
+  const [category, setCategory] = useState(categories[0]);
 
   return ( 
     <Screen>
-      <AppPicker items={categories} icon="apps" placeholder="Category" />
-      <AppTextInput icon="email"   placeholder="Email" />
+      <AppPicker 
+      selectedItem={category} 
+      onSelectItem={item => setCategory(item)} 
+      items={categories} 
+      icon="apps" 
+      placeholder="Category" 
+      />
+      <AppTextInput icon="email" placeholder="Email" />
     </Screen>
   )
 }
