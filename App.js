@@ -21,7 +21,7 @@ const [isNew, setIsNew] = useState(false);
   return ( 
     <Screen>
       <AppPicker icon="apps" placeholder="Category" />
-      <AppTextInput icon="email"  placeholder="Email" />
+      <AppTextInput icon="email"   placeholder="Email" />
     </Screen>
   )
 }

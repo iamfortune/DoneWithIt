@@ -5,9 +5,11 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../config/colors";
 import defaultStyles from "../config/styles";
 import AppText from "./AppText";
+import { TouchableWithoutFeedback } from "react-native";
 
 function AppPicker({ icon, placeholder }) {
   return (
+    <TouchableWithoutFeedback>
     <View style={styles.container}>
       {icon && (
         <MaterialCommunityIcons
@@ -17,8 +19,14 @@ function AppPicker({ icon, placeholder }) {
           style={styles.icon}
         />
       )}
-      <AppText>{placeholder}</AppText>
+      <AppText style={styles.text}>{placeholder}</AppText>
+      <MaterialCommunityIcons
+        name="chevron-down"
+        size={20}
+        color={defaultStyles.colors.medium}
+      />
     </View>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -33,6 +41,9 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
+  },
+  text: {
+    flex: 1,
   },
 });
 
