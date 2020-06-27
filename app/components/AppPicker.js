@@ -2,9 +2,9 @@ import React from "react";
 import { View, TextInput, StyleSheet } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import AppText from './AppText';
 import colors from "../config/colors";
 import defaultStyles from "../config/styles";
+import AppText from "./AppText";
 
 function AppPicker({ icon, placeholder }) {
   return (
@@ -37,4 +37,3 @@ const styles = StyleSheet.create({
 });
 
 export default AppPicker;
-
