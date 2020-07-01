@@ -1,12 +1,15 @@
 import React from 'react';
 import { Text } from 'react-native';
 
+import defaultStyles from '../config/styles';
+
 // headin component
-function AppText({children}) {
+function AppText({ children, style }) {
     return (
-       <Text>{children}</Text>
+       <Text style={[defaultStyles.text, style]}>{children}</Text>
     );
 }
+
 
 export default AppText;
 
