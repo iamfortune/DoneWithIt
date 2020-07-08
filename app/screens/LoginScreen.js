@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 
 import AppButton from "../components/AppButton";
 import AppTextInput from "../components/AppTextInput";
+import AppFormField from '../components/AppFormField';
 import ErrorMessage from "../components/ErrorMessage";
 import Screen from '../components/Screen';
 
@@ -23,30 +24,28 @@ function LoginScreen() {
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
-          {({ handleChange, handleSubmit, errors }) => (
+          {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
             <>
-              <AppTextInput
+              <AppFormField
                 autoCapitalize="none"
                 autoCorrect={false}
                 icon="email"
                 keyboardType="email-address"
-                onChangeText={handleChange("email")}
+                name="email"
                 placeholder="Email"
                 textContentType="emailAddress"
               />
-              <ErrorMessage error={errors.email} />
 
-              <AppTextInput
+              <AppFormField
                 autoCapitalize="none"
                 autoCorrect={false}
                 icon="lock"
-                onChangeText={handleChange("password")}
+                name="password"
                 placeholder="Password"
                 secureTextEntry={true}
                 textContentType="password"
               />
               
-              <ErrorMessage error={errors.password} />
               <AppButton title="Login" onPress={handleSubmit} />
             </>
           )}
