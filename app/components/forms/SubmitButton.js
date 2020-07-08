@@ -1,10 +1,10 @@
 import React from 'react';
 import { useFormikContext } from 'formik'
 
-import AppButton from './AppButton';
+import AppButton from '../AppButton';
 
 function SubmitButton({ title }) {
-    const useFormikContext();
+    const {handleSubmit} = useFormikContext();
     return (
         <AppButton title={title} onPress={handleSubmit} />
     )
