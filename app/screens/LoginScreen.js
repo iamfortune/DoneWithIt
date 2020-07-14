@@ -1,12 +1,13 @@
 import React from 'react';
 import { StyleSheet, Image } from 'react-native';
-import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import AppFormField from '../components/forms/AppFormField';
+
 import Screen from '../components/Screen';
+import AppFormField from "../components/forms/AppFormField";
 import SubmitButton from '../components/forms/SubmitButton';
 import AppForm from '../components/forms/Form';
+
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label('Email'),
