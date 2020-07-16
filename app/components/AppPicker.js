@@ -6,7 +6,7 @@ import colors from "../config/colors";
 import Screen from './Screen';
 import defaultStyles from "../config/styles";
 import AppText from "./AppText";
-import PickerItem from "./PickerItem";
+import PickerItem from "./Picker/PickerItem";
 
 
 function AppPicker({ icon, items, numberOfColumns = 1, onSelectItem, PickerItemComponent = PickerItem, selectedItem, placeholder }) {

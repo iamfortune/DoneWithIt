@@ -9,7 +9,7 @@ import AppFormPicker from '../components/forms/AppFormPicker'
 
 
 import Screen from "../components/Screen";
-import CategoryPickerItem from "../components/CategoryPickerItem";
+import CategoryPickerItem from '../components/Picker/CategoryPickerItem';
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -58,7 +58,7 @@ const categories = [
   {
     backgroundColor: "#4b6bef",
     icon: "headphones",
-    label: "Headsets",
+    label: "Headset",
     value: 7,
   },
   {
@@ -70,7 +70,7 @@ const categories = [
   {
     backgroundColor: "#778ca3",
     icon: "application",
-    label: "Other",
+    label: "Others",
     value: 9,
   },
 ];
