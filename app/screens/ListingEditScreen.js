@@ -9,6 +9,7 @@ import AppFormPicker from '../components/forms/AppFormPicker'
 
 
 import Screen from "../components/Screen";
+import CategoryPickerItem from '../components/Picker/CategoryPickerItem';
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -18,9 +19,60 @@ const validationSchema = Yup.object().shape({
 });
 
 const categories = [
-  { label: "Furniture", value: 1 },
-  { label: "Clothing", value: 2 },
-  { label: "Camera", value: 3 },
+  {
+    backgroundColor: "#fc5c65",
+    icon: "floor-lamp",
+    label: "Furniture",
+    value: 1,
+  },
+  {
+    backgroundColor: "#2bcbba",
+    icon: "shoe-heel",
+    label: "Clothing",
+    value: 2,
+  },
+  {
+    backgroundColor: "#fed330",
+    icon: "camera",
+    label: "Cameras",
+    value: 3,
+  },
+  {
+    backgroundColor: "#a55eea",
+    icon: "book-open-variant",
+    label: "Books",
+    value: 5,
+  },
+  {
+    backgroundColor: "#4b7bec",
+    icon: "phone",
+    label: "Mobile Phones",
+    value: 5,
+  },
+  {
+    backgroundColor: "#45aaf2",
+    icon: "laptop",
+    label: "Laptops",
+    value: 6,
+  },
+  {
+    backgroundColor: "#4b6bef",
+    icon: "headphones",
+    label: "Headset",
+    value: 7,
+  },
+  {
+    backgroundColor: "#fd9644",
+    icon: "car",
+    label: "Cars",
+    value: 8,
+  },
+  {
+    backgroundColor: "#778ca3",
+    icon: "application",
+    label: "Others",
+    value: 9,
+  },
 ];
 
 function ListingEditScreen() {
@@ -43,10 +95,13 @@ function ListingEditScreen() {
           maxLength={8}
           name="price"
           placeholder="Price"
+          width={120}
         />
         <AppFormPicker
           items={categories}
           name="category"
+          numberOfColumns={3}
+          PickerItemComponent={CategoryPickerItem}
           placeholder="Category"
         />
         <AppFormField

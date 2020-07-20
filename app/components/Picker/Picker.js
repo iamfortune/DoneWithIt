@@ -8,11 +8,11 @@ import {
   FlatList,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import colors from "../config/colors";
+import colors from "../../config/colors";
 
-import Screen from "./Screen";
+import Screen from "../Screen";
 import PickerItem from "./PickerItem";
-import Text from "./Text";
+import Text from "../Text";
 
 const AppPicker = ({
   icon,
