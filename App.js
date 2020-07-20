@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import * as ImagePicker from 'expo-image-picker';
+import * as Permissions from 'expo-permissions';
 import { View } from "react-native";
 
 import Card from './app/components/Card';
@@ -17,9 +19,34 @@ import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
 import RegisterScreen from './app/screens/RegisterScreen'
 import ListingEditScreen from './app/screens/ListingEditScreen'
+import { Button, Image } from "react-native";
 
 export default function App() {
-  return <ListingEditScreen />;
+  const [imageUri, setImageUri] = useState();
+
+  const requestPermission = async () => {
+    const { granted } = await ImagePicker.requestCameraRollPermissionsAsync();
+    if (!granted) 
+      alert('You need to enable permission to access the library')
+  }
+  useEffect(() => {
+    requestPermission();
+  }, [])
+
+  const selectImage = async () => {
+    try {
+      const result = await ImagePicker.launchImageLibraryAsync();
+      if (!result.cancelled)
+        setImageUri(result.uri);
+    } catch (error) {
+      console.log('Error reading an image')
+    }
+  }
+
+  return <Screen>
+    <Button title="Select Image" onPress={selectImage} />
+    <Image source={{ uri: imageUri }} style={{ width: 200, height: 200 }} />
+  </Screen>;
 }
 
 
