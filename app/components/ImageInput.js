@@ -1,14 +1,17 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import colors from '../config/colors';
 
+
 function ImageInput({ imageUri }) {
- return (
+    return (
+     <TouchableWithoutFeedback>
      <View style={styles.container}>
          {!imageUri && (<MaterialCommunityIcons color={colors.medium} name="camera" size={40} />)}
          {imageUri && <Image source={{ uri: imageUri }} style={styles.image} />}
      </View>
+     </TouchableWithoutFeedback>
   );
 }
 
