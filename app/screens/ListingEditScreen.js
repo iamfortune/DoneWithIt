@@ -12,6 +12,7 @@ import Screen from "../components/Screen";
 import CategoryPickerItem from '../components/Picker/CategoryPickerItem';
 import FormImagePicker from "../components/forms/FormImagePicker";
 import { ScrollView } from "react-native-gesture-handler";
+import useLocation from "../hooks/useLocation";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -79,7 +80,7 @@ const categories = [
 ];
 
 function ListingEditScreen() {
-  
+  const location = useLocation();
 
   return (
     <ScrollView>
