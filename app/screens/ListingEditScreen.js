@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, Image } from "react-native";
 import * as Yup from "yup";
+import * as Location from 'expo-location'
 
 import AppFormField from "../components/forms/AppFormField";
 import SubmitButton from "../components/forms/SubmitButton";
 import AppForm from "../components/forms/Form";
 import AppFormPicker from '../components/forms/AppFormPicker'
-
 
 import Screen from "../components/Screen";
 import CategoryPickerItem from '../components/Picker/CategoryPickerItem';
@@ -79,6 +79,10 @@ const categories = [
 ];
 
 function ListingEditScreen() {
+  useEffect(() => {
+    const result = await Location.requestPermissionsAsync();
+  }, [])
+
   return (
     <ScrollView>
     <Screen style={styles.container}>
