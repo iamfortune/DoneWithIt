@@ -4,6 +4,7 @@ import * as Permissions from 'expo-permissions';
 import { View, Text } from "react-native";
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer, useNavigation } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Card from './app/components/Card';
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
@@ -52,11 +53,26 @@ const TweetDetails = ({ route }) => (
  
 const Stack = createStackNavigator();
 const StackNavigator = () => (
-  <Stack.Navigator>
-    <Stack.Screen name="Tweets" component={Tweets} />
+  <Stack.Navigator
+    screenOptions={{
+     headerStyle: { backgroundColor: 'dodgerblue' },
+        headerTintColor: 'white',
+  }}>
+    <Stack.Screen
+      name="Tweets"
+      component={Tweets} />
     <Stack.Screen options={({ route }) => ({ title: route.params.id })} name="TweetDetails" component={TweetDetails} />
   </Stack.Navigator>
 )
+
+const Tab = createBottomTabNavigator();
+const TabNavigator = () => (
+  <Tab.Navigator>
+    <Tab.Screen name="Feed" component={Tweets} />
+    <Tab.Screen name="Account" component={TweetDetails} />
+  </Tab.Navigator>
+);
+
 
 export default function App() {
   return (
