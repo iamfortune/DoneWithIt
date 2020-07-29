@@ -65,11 +65,14 @@ const StackNavigator = () => (
   </Stack.Navigator>
 )
 
+
+const Account = () => <Screen><Text>Account</Text></Screen>
+
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
   <Tab.Navigator>
     <Tab.Screen name="Feed" component={Tweets} />
-    <Tab.Screen name="Account" component={TweetDetails} />
+    <Tab.Screen name="Account" component={Account} />
   </Tab.Navigator>
 );
 
@@ -77,7 +80,7 @@ const TabNavigator = () => (
 export default function App() {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <TabNavigator />
     </NavigationContainer>
   );
 }
