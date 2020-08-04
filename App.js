@@ -27,13 +27,16 @@ import ListingEditScreen from './app/screens/ListingEditScreen'
 import { Button, Image } from "react-native";
 import ImageInput from "./app/components/ImageInput";
 import ImageInputList from "./app/components/ImageInputList";
+import AuthNavigator from "./app/navigation/AuthNavigator";
 
 
 
 
 export default function App() {
   return (
-    <WelcomeScreen />
+    <NavigationContainer>
+      <AuthNavigator />
+    </NavigationContainer>
   );
 }
 
