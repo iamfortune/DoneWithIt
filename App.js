@@ -15,6 +15,7 @@ import Icon from './app/components/Icon';
 import Screen from "./app/components/Screen";
 import ListItem from "./app/components/lists/ListItem";
 import AccountScreen from "./app/screens/AccountScreen";
+import WelcomeScreen from './app/screens/WelcomeScreen';
 import ListingsScreen from "./app/screens/ListingsScreen";
 import { TextInput } from "react-native";
 import AppTextInput from "./app/components/AppTextInput";
