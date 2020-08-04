@@ -25,7 +25,7 @@ import ListingEditScreen from './app/screens/ListingEditScreen'
 import { Button, Image } from "react-native";
 import ImageInput from "./app/components/ImageInput";
 import ImageInputList from "./app/components/ImageInputList";
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 const Link = () => {
@@ -70,8 +70,19 @@ const Account = () => <Screen><Text>Account</Text></Screen>
 
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
-  <Tab.Navigator>
-    <Tab.Screen name="Feed" component={Tweets} />
+  <Tab.Navigator
+    tabBarOptions={{
+      activeBackgroundColor: 'tomato',
+      activeTintColor: "white",
+      inactiveBackgroundColor: '#eee',
+      inactiveTintColor: 'black'
+  }}>
+    <Tab.Screen
+      name="Feed"
+      component={Tweets}
+      options={{
+        tabBarIcon: ({ size, color }) => <MaterialCommunityIcons name="home" size={size} color={color} />
+      }}/>
     <Tab.Screen name="Account" component={Account} />
   </Tab.Navigator>
 );
