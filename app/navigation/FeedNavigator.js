@@ -2,7 +2,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 
 import ListingsScreen from "../screens/ListingsScreen";
-import ListingDetails from "../screens/ListingDetailsScreen";
+import ListingDetailsScreen from "../screens/ListingDetailsScreen";
+
 
 const Stack = createStackNavigator();
 
