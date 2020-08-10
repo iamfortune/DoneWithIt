@@ -1,1 +1,16 @@
+import { createStackNavigator } from "@react-navigation/stack";
+import React from "react";
 
+import ListingsScreen from "../screens/ListingsScreen";
+import ListingDetails from "../screens/ListingDetailsScreen";
+
+const Stack = createStackNavigator();
+
+const FeedNavigator = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="Listings" component={ListingsScreen} />
+    <Stack.Screen name="ListingDetails" component={ListingDetailsScreen} />
+  </Stack.Navigator>
+);
+
+export default FeedNavigator;
