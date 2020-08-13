@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native'
 import AppButton from '../components/AppButton';
-import App from '../../App';
 
-const WelcomeScreen = () => {
+
+const WelcomeScreen = ({ navigation }) => {
     return (
       <ImageBackground
-      blurRadius={3} // this made the background image blurry
+        blurRadius={3} // this made the background image blurry
         style={styles.background}
         source={require("../assets/background.jpg")}
       >
@@ -18,9 +18,16 @@ const WelcomeScreen = () => {
           <Text style={styles.tagline}>Sell Items You Don't Need</Text>
         </View>
         <View style={styles.buttonsContainer}>
-          <AppButton title="Login" />
-          <AppButton title="Register" color="secondary" />
-        </View> 
+          <AppButton
+            title="Login"
+            onPress={() => navigation.navigate("Login")}
+          />
+          <AppButton
+            title="Register"
+            color="secondary"
+            onPress={() => navigation.navigate("Register")}
+          />
+        </View>
       </ImageBackground>
     );
 }
