@@ -1,4 +1,4 @@
-import apiClient from './client';
+import client from './client';
 
 const endpoint = '/listings';
 
